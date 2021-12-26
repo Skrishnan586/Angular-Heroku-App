@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "6046b30d-0763-4cbc-a80a-1b6ed3e15e62"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app21": {
+    "mini-project-phone-book": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app21",
+            "outputPath": "dist/mini-project-phone-book",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -68,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "app21:build:production"
+              "browserTarget": "mini-project-phone-book:build:production"
             },
             "development": {
-              "browserTarget": "app21:build:development"
+              "browserTarget": "mini-project-phone-book:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app21:build"
+            "browserTarget": "mini-project-phone-book:build"
           }
         },
         "test": {
@@ -102,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "app21"
+  "defaultProject": "mini-project-phone-book"
 }
